@@ -1,368 +1,455 @@
-<!-- HELLO
--
-DevFolio is a minimal, clean, lightweight and fully responsive template for Devlopers!
-Created by Anil Seervi.
--
-GitHub repo: https://github.com/AnilSeervi/DevFolio
-README: https://github.com/AnilSeervi/DevFolio/blob/master/README.md
--
-Have fun creating your portfolio on this template!!! -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alaiza Joyce Baculo | Computer Engineer</title>
+  <meta name="keywords" content="Alaiza Joyce Baculo, Computer Engineering, Portfolio, Projects" />
+  <meta name="description" content="Portfolio of Alaiza Joyce Baculo, Computer Engineering Student & Developer" />
+  <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
+  <meta name="theme-color" content="#36d1dc" />
 
-    <!-- Title: add your Portfolio websites's title here -->
-    <title>[Your name here] | Developer</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/main.css" />
 
-    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
-    <meta name="keywords" content="[username], [name], skill" />
+  <!-- FontAwesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
-    <!-- Improve your SEO by adding a small descrption of you -->
-    <meta name="description" content="[Your name here] | Developer" />
+  <!-- JS -->
+  <script defer src="./javascript/scrollreveal.min.js"></script>
+  <script defer src="./javascript/scrollreveal.js"></script>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div id="hero">
+    <section class="container">
+      <h1 class="hero-title">
+        Hi! My name is<br />
+        <span class="text-color-main name">Alaiza Joyce Baculo</span><br />
+        I'm a Computer Engineering Graduate.
+      </h1>
+      <p class="hero-cta">
+        <a class="cta-btn cta-btn--hero" href="#contact">Get in Touch</a>
+      </p>
+    </section>
+    <a href="#about" class="scroll-down-link" aria-label="scroll-down">
+      <div class="scroll-down"></div>
+    </a>
+  </div>
 
-    <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
-    <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
-
-    <!-- Add your primary-theme color for the value of content -->
-    <meta name="theme-color" content="#36d1dc" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <!-- Fill content with the URL of this portfolio you'll host -->
-    <meta property="og:url" content="https://devfolio.js.org/" />
-    <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
-    <meta property="og:title" content="[Your name here] | Developer" />
-    <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
-    <meta property="og:description" content="Made using DevFolio Template" />
-    <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
-      so that a thumbnail image of your portfolio is shown while shared on other platform -->
-    <meta
-      property="og:image"
-      content="https://devfolio.js.org/assets/devfolio.png"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <!-- Again fill content attr with the URL of this portfolio you'll host -->
-    <meta property="twitter:url" content="https://devfolio.js.org" />
-    <!-- Recommended to use the same text used within <title> element -->
-    <meta property="twitter:title" content="[Your name here] | Developer" />
-    <!-- short description that shows up while your portfolio is shared -->
-    <meta
-      property="twitter:description"
-      content="Made using DevFolio Template"
-    />
-    <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
-    <meta
-      property="twitter:image"
-      content="https://anilseervi.vercel.app/assets/devfolio.png"
-    />
-
-    <!-- link tags -->
-    <link rel="preload" as="style" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-
-    <!-- FontAwesome Icons link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script defer src="./javascript/scrollreveal.min.js"></script>
-    <script
-      defer
-      type="text/javascript"
-      src="./javascript/scrollveal.js"
-    ></script>
-
-    <!-- Remove Google Analytics once you have your portfolio website set-up -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag("js", new Date())
-
-      gtag("config", "UA-122228201-4")
-    </script>
-    <!-- End of Google Analytics -->
-  </head>
-  <body>
-    <!-- Hero Section -->
-    <div id="hero">
-      <section class="container">
-        <h1 class="hero-title">
-          Hi, my name is <span class="text-color-main name">Your Name</span>
-          <br />
-          I'm the Unknown Developer.
-        </h1>
-        <p class="hero-cta">
-          <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
-        </p>
-      </section>
-      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
-        <div class="scroll-down"></div
-      ></a>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="row about-wrapper">
+        <div class="about-wrapper__image">
+          <img src="./assets/alaiza-profile.jpg" alt="Profile Image" width="450" height="350" />
+        </div>
+        <div class="about-wrapper__info">
+          <p>I am a Computer Engineering graduate from Marinduque State University, passionate about creating innovative tech solutions, robotics, and smart automation.</p>
+          <p>I enjoy working on projects that help communities, develop my skills, and bring ideas to life.</p>
+          <span class="about-wrapper__cta">
+            <a href="./assets/resume.pdf" class="cta-btn cta-btn--resume" target="_blank" rel="noopener noreferrer">View Resume</a>
+          </span>
+        </div>
+      </div>
     </div>
-    <!-- /END Hero Section -->
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="row about-wrapper">
-          <div class="about-wrapper__image">
-            <img
-              class="img-fluid"
-              src="./assets/profile.png"
-              alt="Profile Image"
-              width="450"
-              height="350"
-            />
-          </div>
-          <div class="about-wrapper__info">
-            <p class="about-wrapper__info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus quae repellat, ad omnis distinctio velit saepe expedita
-              architecto cumque veritatis adipisci. Sapiente non, saepe hic
-              adipisci doloribus quisquam recusandae et.
-            </p>
-            <p class="about-wrapper__info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              obcaecati doloribus qui praesentium quae veniam esse mollitia
-              consequuntur nisi minima quasi et fugit quidem enim recusandae
-              delectus, iusto culpa rerum?
-            </p>
-            <span class="about-wrapper__cta">
-              <a href="#" class="cta-btn cta-btn--resume">View Resume</a>
-            </span>
-          </div>
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title dark-blue-text">Projects</h2>
+
+      <!-- Smart Harvest Project -->
+      <article class="row">
+        <div class="project-wrapper__text">
+          <h3 class="project-wrapper__text-title">Smart Harvest</h3>
+          <p class="project-wrapper__text-info">
+            Automated ripe fruit detection for tomatoes using image processing.
+          </p>
         </div>
-      </div>
-    </section>
-    <!-- /END About Section -->
-
-    <!--Projects Section-->
-    <section id="projects">
-      <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
-
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Project Title</h3>
-              <p class="project-wrapper__text-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
-                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
-                sint saepe nostrum! Enim, perferendis.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/project.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
-
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Project Title</h3>
-              <p class="project-wrapper__text-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
-                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
-                sint saepe nostrum! Enim, perferendis.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/project.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
-
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Project Title</h3>
-              <p class="project-wrapper__text-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
-                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
-                sint saepe nostrum! Enim, perferendis.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/project.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
+        <div class="project-wrapper__image" style="text-align:center;">
+          <img src="./assets/project.png" class="img-fluid" alt="Smart Harvest Project" />
+          <br />
+          <button id="openGalleryBtn" class="cta-btn cta-btn--projects" style="margin-top:1rem;">More Details</button>
         </div>
-      </div>
-    </section>
-    <!-- End Projects Section -->
+      </article>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper">
-          <p class="contact-wrapper__text">[Put your call to action here]</p>
-          <a href="#" class="cta-btn cta-btn--resume">Call to Action</a>
+      <!-- Smart Harvest Image Overlay -->
+<div id="smartHarvestGallery" class="overlay" aria-hidden="true" style="display:none;">
+  <button id="closeGalleryBtn" class="close-btn" aria-label="Close gallery">✖</button>
+
+  <!-- Arrow buttons -->
+  <button class="gallery-arrow prev" id="prevSlide" aria-label="Previous image">❮</button>
+  <button class="gallery-arrow next" id="nextSlide" aria-label="Next image">❯</button>
+
+  <div class="gallery-wrapper">
+    <div class="gallery-slider">
+      <img src="./assets/project-long1.png" alt="Project Image 1" draggable="false" />
+      <img src="./assets/project-long2.png" alt="Project Image 2" draggable="false" />
+      <img src="./assets/project-long3.png" alt="Project Image 3" draggable="false" />
+      <img src="./assets/project-long4.png" alt="Project Image 4" draggable="false" />
+      <img src="./assets/project-long5.png" alt="Project Image 5" draggable="false" />
+      <img src="./assets/project-long6.png" alt="Project Image 6" draggable="false" />
+      <img src="./assets/project-long7.png" alt="Project Image 7" draggable="false" />
+      <img src="./assets/project-long8.png" alt="Project Image 8" draggable="false" />
+    </div>
+  </div>
+</div>
+
+
+
+      <!-- Miniature Plaza Project -->
+      <article class="row">
+        <div class="project-wrapper__text">
+          <h3 class="project-wrapper__text-title">Miniature Plaza</h3>
+          <p class="project-wrapper__text-info">
+            A scaled-down plaza model with hardware components like lights, motors, and sensors to simulate real-world automation.
+          </p>
         </div>
-      </div>
-    </section>
-    <!-- END Contact Section -->
+        <div class="project-wrapper__image" style="text-align:center;">
+          <img src="./assets/miniature-preview.jpg" class="img-fluid" alt="Miniature Plaza Project" />
+          <br />
+          <button id="openMiniatureVideo" class="cta-btn cta-btn--projects" style="margin-top:1rem;">Watch Video</button>
+        </div>
+      </article>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container">
-        <a href="#hero" class="back-to-top" aria-label="go back to top">
-          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+      <!-- Miniature Plaza Video Overlay -->
+      <div id="miniatureVideoOverlay" style="display:none;">
+        <button id="closeMiniatureVideo" class="close-btn">✖</button>
+        <video id="miniatureVideo" controls>
+          <source src="./assets/miniature-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+<!-- Experience Section -->
+<section id="experience">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+
+    <!-- Experience 1 -->
+    <article class="row experience-wrapper">
+      <div class="experience-wrapper__text">
+        <h3>MarSU–ICpEP.SE — Business Manager (2nd Year)</h3>
+        <p>Handled financial records, supported events, and assisted in organizational planning.</p>
+      </div>
+      <div class="experience-wrapper__image" style="text-align:center;">
+        <img src="./assets/experience-business-manager.jpg" class="img-fluid project-img" alt="Business Manager Experience" />
+      </div>
+    </article>
+
+    <!-- Experience 2 -->
+    <article class="row experience-wrapper">
+      <div class="experience-wrapper__text">
+        <h3>MarSU–ICpEP.SE — President (3rd Year)</h3>
+        <p>Led the organization, spearheaded trainings, and represented the society in regional/national events.</p>
+      </div>
+      <div class="experience-wrapper__image" style="text-align:center;">
+        <img src="./assets/experience-president.jpg" class="img-fluid project-img" alt="President Experience" />
+      </div>
+    </article>
+
+    <!-- Experience 3 -->
+    <article class="row experience-wrapper">
+      <div class="experience-wrapper__text">
+        <h3>MarSU–ICpEP.SE — Board of Director (4th Year)</h3>
+        <p>Provided guidance to officers, supported project implementation, and ensured continuity of initiatives.</p>
+      </div>
+      <div class="experience-wrapper__image" style="text-align:center;">
+        <img src="./assets/experience-bod.jpg" class="img-fluid project-img" alt="Board of Director Experience" />
+      </div>
+    </article>
+
+    <!-- Experience 4 -->
+    <article class="row experience-wrapper">
+      <div class="experience-wrapper__text">
+        <h3>ESO — Board of Director</h3>
+        <p>Collaborated with other engineering organizations in planning and implementing university-wide engineering events.</p>
+      </div>
+      <div class="experience-wrapper__image" style="text-align:center;">
+        <img src="./assets/experience-eso.jpg" class="img-fluid project-img" alt="ESO Board of Director Experience" />
+      </div>
+    </article>
+
+    <!-- Experience 5 -->
+    <article class="row experience-wrapper">
+      <div class="experience-wrapper__text">
+        <h3>Regional Participant — CpE Quiz Bowl</h3>
+        <p>Represented Marinduque State University in the Regional Computer Engineering Quiz Bowl.</p>
+      </div>
+      <div class="experience-wrapper__image" style="text-align:center;">
+        <img src="./assets/experience-quizbowl.jpg" class="img-fluid project-img" alt="CpE Quiz Bowl Experience" />
+      </div>
+    </article>
+
+  </div>
+</section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-wrapper">
+      <!-- Skill Card 1 -->
+      <div class="skill-card">
+        <i class="fa-solid fa-code"></i>
+        <h3>Programming & Development</h3>
+        <p>C, C++, Python, JavaScript, Arduino, Raspberry Pi, HTML, CSS, PHP</p>
+      </div>
+
+      <!-- Skill Card 2 -->
+      <div class="skill-card">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h3>Frameworks & Tools</h3>
+        <p>React, Node.js, Express.js, Gatsby, Git & GitHub, Packet Tracer, MATLAB, VS Code, Canva</p>
+      </div>
+
+      <!-- Skill Card 3 -->
+      <div class="skill-card">
+        <i class="fa-solid fa-database"></i>
+        <h3>Databases</h3>
+        <p>MySQL, SQLite</p>
+      </div>
+
+      <!-- Skill Card 4 -->
+      <div class="skill-card">
+        <i class="fa-solid fa-microchip"></i>
+        <h3>Hardware & Systems</h3>
+        <p>Robotics & Automation, Circuit Design, Image Processing, Networking Protocols (TCP/IP, DHCP, HTTP)</p>
+      </div>
+
+      <!-- Skill Card 5 -->
+      <div class="skill-card">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>Leadership & Management</h3>
+        <p>Project Management, Organizational Leadership, Event Planning, Public Speaking, Collaboration</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-wrapper">
+      <p class="contact-wrapper__text">
+        Have a project in mind, or just want to connect? I’m always open to collaborations, opportunities, and new ideas.
+      </p>
+      <a href="mailto:alaizajoyce.baculo@gmail.com" class="cta-btn cta-btn--resume">
+        Contact Me
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#hero" class="back-to-top" aria-label="go back to top">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+      </a>
+      <div class="social-links">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/alaiza.joyce.baculo.07/" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+          <i class="fa-brands fa-facebook"></i>
         </a>
-        <div class="social-links">
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="twitter"
-          >
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="instagram"
-          >
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="codepen"
-          >
-            <i class="fa-brands fa-codepen"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="linkedin"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="github"
-          >
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-        <hr />
-        <p class="footer__text">
-          &copy; <span id="year"></span> - Template by
-          <a
-            href="https://github.com/AnilSeervi"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Anil Seervi</a
-          >. <br />Made with &hearts;
-        </p>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/alaizajoycebaculo" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/alaizajoycebaculo" target="_blank" rel="noopener noreferrer" aria-label="github">
+          <i class="fa-brands fa-github"></i>
+        </a>
       </div>
-    </footer>
-    <!-- END Footer Section -->
+      <hr />
+        <p class="footer__text">
+    2025 <a href="https://github.com/alaizajoycebaculo" target="_blank" rel="noopener noreferrer">Alaiza Joyce Baculo</a>. 
+        Made with &hearts;
+      </p>
+    </div>
+  </footer>
+  <p class="footer__text">
+    © 2025 Alaiza Joyce Baculo | All Rights Reserved
+  </p>
+</footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear()
-    </script>
-    <script src="./javascript/vanilla-tilt.min.js"></script>
-    <script type="text/javascript" src="./javascript/valtilt.js"></script>
-  </body>
+  <!-- Scripts -->
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Elements
+  const openBtn = document.getElementById("openGalleryBtn");
+  const overlay = document.getElementById("smartHarvestGallery");
+  const closeBtn = document.getElementById("closeGalleryBtn");
+  const slider = overlay?.querySelector(".gallery-slider");
+  const slides = slider ? Array.from(slider.children) : [];
+
+  if (!openBtn || !overlay || !closeBtn || !slider || slides.length === 0) {
+    // required elements missing — nothing to do
+    return;
+  }
+
+  // state
+  let index = 0;
+  let startX = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let isDragging = false;
+
+  const wrapper = overlay.querySelector(".gallery-wrapper");
+
+  function openGallery(at = 0) {
+    index = at;
+    overlay.style.display = "flex";
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden"; // prevent page scroll
+    setPositionByIndex(true);
+  }
+
+  function closeGallery() {
+    overlay.style.display = "none";
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = ""; // restore page scroll
+  }
+
+  function getWidth() {
+    return wrapper.clientWidth;
+  }
+
+  function setPositionByIndex(skipTransition = false) {
+    if (skipTransition) slider.style.transition = "none";
+    else slider.style.transition = "transform 350ms cubic-bezier(.22,.95,.21,1)";
+    prevTranslate = -index * getWidth();
+    currentTranslate = prevTranslate;
+    slider.style.transform = `translateX(${currentTranslate}px)`;
+    // force reflow to allow next transition
+    if (skipTransition) requestAnimationFrame(() => slider.style.transition = "");
+  }
+
+  // open / close
+  openBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    openGallery(0);
+  });
+  closeBtn.addEventListener("click", closeGallery);
+
+  // pointer events: pointerdown / move / up
+  slider.addEventListener("pointerdown", (e) => {
+    isDragging = true;
+    startX = e.clientX;
+    slider.style.transition = "none";
+    slider.classList.add("grabbing");
+    slider.setPointerCapture?.(e.pointerId);
+  });
+
+  slider.addEventListener("pointermove", (e) => {
+    if (!isDragging) return;
+    const currentX = e.clientX;
+    const dx = currentX - startX;
+    currentTranslate = prevTranslate + dx;
+    slider.style.transform = `translateX(${currentTranslate}px)`;
+  });
+
+  function endDrag(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    slider.classList.remove("grabbing");
+    const moved = currentTranslate - prevTranslate;
+    const threshold = getWidth() * 0.18; // 18% swipe threshold
+    if (moved < -threshold && index < slides.length - 1) {
+      index++;
+    } else if (moved > threshold && index > 0) {
+      index--;
+    }
+    // clamp index
+    index = Math.max(0, Math.min(index, slides.length - 1));
+    setPositionByIndex();
+    // release pointer capture if available
+    try { slider.releasePointerCapture && slider.releasePointerCapture(e.pointerId); } catch (err) {}
+  }
+
+  slider.addEventListener("pointerup", endDrag);
+  slider.addEventListener("pointercancel", endDrag);
+  slider.addEventListener("pointerleave", (e) => {
+    // If pointer leaves while dragging, end the drag
+    if (isDragging) endDrag(e);
+  });
+
+  // keyboard left/right support when overlay open
+  document.addEventListener("keydown", (e) => {
+    if (overlay.style.display !== "flex") return;
+    if (e.key === "ArrowLeft" && index > 0) {
+      index--; setPositionByIndex();
+    } else if (e.key === "ArrowRight" && index < slides.length - 1) {
+      index++; setPositionByIndex();
+    } else if (e.key === "Escape") {
+      closeGallery();
+    }
+  });
+
+  // keep slider aligned when window resizes
+  window.addEventListener("resize", () => {
+    // small timeout so layout settles
+    setTimeout(() => setPositionByIndex(true), 120);
+  });
+  // Arrow buttons
+const prevBtn = document.getElementById("prevSlide");
+const nextBtn = document.getElementById("nextSlide");
+
+if (prevBtn && nextBtn) {
+  prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      setPositionByIndex();
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (index < slides.length - 1) {
+      index++;
+      setPositionByIndex();
+    }
+  });
+}
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Miniature Plaza Video Overlay
+  const openVideoBtn = document.getElementById("openMiniatureVideo");
+  const videoOverlay = document.getElementById("miniatureVideoOverlay");
+  const closeVideoBtn = document.getElementById("closeMiniatureVideo");
+  const video = document.getElementById("miniatureVideo");
+
+  if (openVideoBtn && videoOverlay && closeVideoBtn && video) {
+    openVideoBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      videoOverlay.style.display = "flex";
+      document.body.style.overflow = "hidden"; // prevent page scroll
+      // no autoplay, user clicks play manually
+    });
+
+    closeVideoBtn.addEventListener("click", () => {
+      videoOverlay.style.display = "none";
+      document.body.style.overflow = ""; // restore scroll
+      video.pause();
+      video.currentTime = 0; // reset to start
+    });
+  }
+});
+</script>
+
+</body>
 </html>
