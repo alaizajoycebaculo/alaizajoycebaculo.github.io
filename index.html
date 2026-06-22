@@ -130,7 +130,320 @@
         </video>
       </div>
     </div>
-  </section>
+
+  <!-- DILG MORION -->
+<article class="row">
+  <div class="project-wrapper__text">
+    <h3 class="project-wrapper__text-title">DILG MORION</h3>
+    <p class="project-wrapper__text-info">
+      The DILG MORION is a digital platform designed to simplify the process of applying for and managing employee leave requests.
+      The system allows staff members to submit leave applications electronically, view their leave credits, access personal files, and monitor the status of their leave requests.
+    </p>
+  </div>
+
+  <div class="project-wrapper__image" style="text-align:center;">
+    <img src="./assets/morion.png" class="img-fluid" alt="DILG MORION Project" />
+
+    <br />
+
+    <button id="openUserManualBtn"
+            class="cta-btn cta-btn--projects"
+            style="margin-top:1rem;">
+      User Manual
+    </button>
+  </div>
+</article>
+
+<script>
+document.getElementById("openUserManualBtn").addEventListener("click", function () {
+  window.open("./assets/Morion.pdf", "_blank");
+});
+</script>
+
+<!-- Certificates Section -->
+<section id="certificates">
+  <h2 class="section-title">Certificates</h2>
+
+  <div class="cert-container">
+    <button class="arrow prev" id="prevBtn">❮</button>
+    <button class="arrow next" id="nextBtn">❯</button>
+
+    <div class="cert-display">
+      <!-- Certificate 1 -->
+      <div class="slide active" data-index="0">
+        <img src="./assets/cert1.jpg" alt="Civil Service Eligibility" />
+        <h3>Civil Service Eligibility</h3>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="slide" data-index="1">
+        <img src="./assets/cert2.jpg" alt="Technical Training" />
+        <h3>Technical Training</h3>
+      </div>
+
+      <!-- Certificate 3 -->
+      <div class="slide" data-index="2">
+        <img src="./assets/cert3.jpg" alt="Seminars" />
+        <h3>Seminars</h3>
+      </div>
+
+      <!-- Certificate 4 -->
+      <div class="slide" data-index="3">
+        <img src="./assets/cert4.jpg" alt="Technical Training" />
+        <h3>Technical Training</h3>
+      </div>
+
+      <!-- Certificate 5 -->
+      <div class="slide" data-index="4">
+        <img src="./assets/cert5.jpg" alt="Technical Training" />
+        <h3>Technical Training</h3>
+      </div>
+
+      <!-- Certificate 6 -->
+      <div class="slide" data-index="5">
+        <img src="./assets/cert6.jpg" alt="Technical Training" />
+        <h3>Technical Training</h3>
+      </div>
+
+      <!-- Certificate 7 -->
+      <div class="slide" data-index="6">
+        <img src="./assets/cert7.jpg" alt="Technical Training" />
+        <h3>Technical Training</h3>
+      </div>
+
+      <!-- Certificate 8 -->
+      <div class="slide" data-index="7">
+        <img src="./assets/cert8.jpg" alt="Technical Training" />
+        <h3>Technical Training</h3>
+      </div>
+
+      <!-- Certificate 9 -->
+      <div class="slide" data-index="8">
+        <img src="./assets/cert9.jpg" alt="Technical Training" />
+        <h3>Technical Training</h3>
+      </div>
+
+      <!-- Certificate 10 -->
+      <div class="slide" data-index="9">
+        <img src="./assets/cert10.jpg" alt="Technical Training" />
+        <h3>Technical Training</h3>
+      </div>
+
+      <!-- Certificate 11 -->
+      <div class="slide" data-index="10">
+        <img src="./assets/cert11.jpg" alt="Technical Training" />
+        <h3>Technical Training</h3>
+      </div>
+
+      <!-- Certificate 12 -->
+      <div class="slide" data-index="11">
+        <img src="./assets/cert12.jpg" alt="Technical Training" />
+        <h3>Technical Training</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dots indicator -->
+  <div class="dots-container" id="dotsContainer"></div>
+</section>
+
+<script>
+
+// ===== CERTIFICATE VIEWER - ONE PER PAGE =====
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Certificate viewer loaded!");
+
+  const slides = document.querySelectorAll(".slide");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const dotsContainer = document.getElementById("dotsContainer");
+
+  if (!slides || slides.length === 0) {
+    console.log("No slides found!");
+    return;
+  }
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  let autoPlayTimer = null;
+  const AUTO_PLAY_DELAY = 4000;
+
+  // ========================================
+  // SHOW ONLY ONE CERTIFICATE
+  // ========================================
+  function showSlide(index) {
+    // 1. Hide ALL slides
+    slides.forEach(function(slide) {
+      slide.classList.remove("active");
+    });
+
+    // 2. Show ONLY the selected slide
+    slides[index].classList.add("active");
+    currentIndex = index;
+
+    // 3. Update dots
+    updateDots();
+
+    console.log("Showing certificate " + (index + 1) + " of " + totalSlides);
+  }
+
+  // ========================================
+  // NAVIGATION
+  // ========================================
+  function nextSlide() {
+    let nextIndex = currentIndex + 1;
+    if (nextIndex >= totalSlides) {
+      nextIndex = 0;  // Loop back to first
+    }
+    showSlide(nextIndex);
+    resetAutoPlay();
+  }
+
+  function prevSlide() {
+    let prevIndex = currentIndex - 1;
+    if (prevIndex < 0) {
+      prevIndex = totalSlides - 1;  // Loop to last
+    }
+    showSlide(prevIndex);
+    resetAutoPlay();
+  }
+
+  // ========================================
+  // DOTS
+  // ========================================
+  function updateDots() {
+    const dots = document.querySelectorAll(".dot");
+    dots.forEach(function(dot, index) {
+      if (index === currentIndex) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    });
+  }
+
+  function createDots() {
+    dotsContainer.innerHTML = "";
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("button");
+      dot.className = "dot";
+      if (i === 0) dot.classList.add("active");
+      dot.setAttribute("data-index", i);
+      
+      dot.addEventListener("click", function() {
+        const index = parseInt(this.getAttribute("data-index"));
+        showSlide(index);
+        resetAutoPlay();
+      });
+      
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  // ========================================
+  // AUTO-PLAY
+  // ========================================
+  function startAutoPlay() {
+    stopAutoPlay();
+    autoPlayTimer = setInterval(function() {
+      nextSlide();
+    }, AUTO_PLAY_DELAY);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+
+  function resetAutoPlay() {
+    stopAutoPlay();
+    startAutoPlay();
+  }
+
+  // ========================================
+  // BUTTON EVENTS
+  // ========================================
+  prevBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log("⬅ Previous button clicked!");
+    prevSlide();
+  });
+
+  nextBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log("➡ Next button clicked!");
+    nextSlide();
+  });
+
+  // ========================================
+  // KEYBOARD SUPPORT
+  // ========================================
+  document.addEventListener("keydown", function(e) {
+    const certSection = document.getElementById("certificates");
+    const rect = certSection.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+    
+    if (!isVisible) return;
+    
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      nextSlide();
+    }
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      prevSlide();
+    }
+  });
+
+  // ========================================
+  // TOUCH/SWIPE SUPPORT
+  // ========================================
+  let touchStartX = 0;
+  let touchEndX = 0;
+  const certDisplay = document.querySelector(".cert-display");
+
+  certDisplay.addEventListener("touchstart", function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoPlay();
+  }, { passive: true });
+
+  certDisplay.addEventListener("touchend", function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    const threshold = 40;
+    
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+    resetAutoPlay();
+  }, { passive: true });
+
+  // ========================================
+  // PAUSE ON HOVER
+  // ========================================
+  const certContainer = document.querySelector(".cert-container");
+  certContainer.addEventListener("mouseenter", stopAutoPlay);
+  certContainer.addEventListener("mouseleave", startAutoPlay);
+
+  // ========================================
+  // INITIALIZE
+  // ========================================
+  createDots();
+  showSlide(0);  // Show first certificate
+  startAutoPlay();
+
+  console.log("✅ Certificate viewer ready!");
+  console.log("Total certificates: " + totalSlides);
+});
+</script>
 
 <!-- Experience Section -->
 <section id="experience">
